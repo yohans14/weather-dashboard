@@ -1,0 +1,30 @@
+.searchCity{
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+    min-height: 200px;
+}
+.addCity{
+    margin: 10px;
+    background-color: #dfdfdf;
+    min-height: 300px;
+    border: 3px solid #333;
+
+}
+.currentWeather{
+    margin: 10px;
+    background-color: #dfdfdf;
+    min-height: 200px;
+    border: 3px solid #333;
+
+}
+.futureForecast{
+    margin: 10px;
+    background-color: #dfdfdf;
+    min-height: 300px;
+    border: 3px solid #333;
+
+}
+header h3{
+    background-color: #727ad8a1;
+}
