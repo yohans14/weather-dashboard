@@ -4,9 +4,9 @@ $(document).ready(function () {
       e.preventDefault();
       // GNews api url with query input.text
       var query = $("#cityName").val();
-      var url ="api.openweathermap.org/data/2.5/forecast?" +
-      "q=" + query +"&units=imperial&appid=0ac1781e4e58355720795bec8018d18e"
-
+      var url ="https://api.openweathermap.org/data/2.5/forecast?" +
+      "q=" + query +
+      "&units=imperial&appid=0ac1781e4e58355720795bec8018d18e"
       if (query !== "") {
         $.ajax({
           url: url,
@@ -23,7 +23,7 @@ $(document).ready(function () {
           // if ajax request return true the array data passed through for() loop
           success: function (weather) {
             let output = "";
-            let currentweather = weather.current;
+            let currentweather = weather.list;
 
             console.log(weather)
 
