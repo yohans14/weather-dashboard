@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-  </head>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-  <header class="container">
-    <div class="row">
-      <h3 class="center">Weather Dashboard</h3>
-    </div>
-  </header>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col s3">
-          <div class="searchCity">
-            <form>
-              <div class="input-field">
-                <label>Search for a City:</label>
-                <input type="text"
-                placeholder="City Name"
-                id="cityName"
-                >
-              </div>
-              <div>
-                <input type="submit" id="searchbtn" class="btn" value="search">
-              </div>
-            </form>
-            <div id="loader" style="display:none;">
-              <div class="progress">
-                <div class="indeterminate"></div>
-              </div>
-            </div>
-          </div>
-          <div class="cityHistory row">
-            <div id="cityHistory"></div>
-         </div>
-        </div>
-        <div class="col s9">
-          <div id="currentWeather" class="currentWeather">
-          </div>
-          <div id="futureForecast" class="futureForecast"></div>
-        </div>
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/js/weather.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather Dashboard</title>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+	</head>
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+		integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+		crossorigin="anonymous"
+	></script>
+	<header class="container">
+		<div class="row">
+			<h3 class="center z-depth-5">Weather Dashboard</h3>
+		</div>
+	</header>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col s3">
+					<div class="searchCity">
+						<form id="city-form" class="card-body">
+							<div class="input-field">
+								<label>Search for a City:</label>
+								<input type="text" placeholder="City Name" id="cityName" />
+							</div>
+							<div>
+								<input
+									type="submit"
+									id="searchbtn"
+									class="btn col s12"
+									value="search"
+								/>
+							</div>
+						</form>
+						<div id="loader" style="display: none">
+							<div class="progress">
+								<div class="indeterminate"></div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="cityHistoryContiner" id="cityHistoryContiner">
+						<!-- searchCity history goes here  -->
+					</div>
+				</div>
+				<div class="col s9">
+					<div id="currentWeather" class="row currentWeather">
+						<!-- the serach result goes here -->
+					</div>
+					<div id="futureForecast" class="row futureForecast">
+						<!-- futureForecast goes here -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+			integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="./assets/js/weather.js"></script>
+	</body>
 </html>
